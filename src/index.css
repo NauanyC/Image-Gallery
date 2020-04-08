@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{    
+    font-family: 'Gotu', sans-serif;
+    font-size: 15px;  
+    color: rgb(43, 42, 42);     
+    background-image: linear-gradient(to bottom, rgb(236,238,236) , rgb(222, 232, 242));       
+    overflow-x: hidden;
+}
+
+/* =============== landing style beggining =============== */
+
+#landing{
+    height: 120vh; 
+    width: 100vw;    
+    background-image: url("../src/images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+#landing nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;    
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+#landing nav ul li a{
+    margin: auto 20px;
+    text-decoration: none;
+    color: inherit;    
+}
+
+#landing nav ul li a:hover{
+    color: rgb(82, 87, 87);
+    font-weight: 600;
+}
+
+#landing .text-container{
+    width: 50%;
+    float: right;
+    margin-top: 70px;
+    margin-right: 15px;
+    display: grid;
+}
+
+#landing .text-container h1{
+    font-size: 2rem;
+}
+
+#btn{
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    border-style: none;
+    box-shadow: 1px 1px 0px 0px grey;
+    background-color: rgba(43, 42, 42, 0.9); 
+    color:  whitesmoke;
+    margin: 30px auto;
+}
+
+#btn:focus { 
+    outline:0;
+    background-color: rgba(43, 42, 42, 1.0);
+}
+
+footer{
+    text-align: center;
+    margin-top: 25px;
+    padding: 5px;
+    background-color: rgba(43, 42, 42, 0.9); 
+    color: white;
+    font-size: 0.8em;
+}
+
+
+/* =============== landing style end =============== */
+
+
+/* =============== main style beggining =============== */
+
+.main-container{
+    width: 95%;
+    margin: 5px auto;
+}
+
+.images-container{
+    /* Prevent vertical gaps */
+    line-height: 0;
+    
+    -webkit-column-count: 4;
+    -webkit-column-gap:   0px;
+    -moz-column-count:    4;
+    -moz-column-gap:      0px;
+    column-count:         4;
+    column-gap:           2px;  
+}
+
+.images-container img{
+    /* Just in case there are inline attributes */
+    width: 100%;
+    min-height: 205px;
+    margin-top: 3px;       
+}
+
+/* =============== main style end =============== */
+
+
+/* media queries */
+
+@media (max-width: 650px) {
+    
+    #landing .text-container h1{
+        font-size: 1.7rem;
+    }
+
+    .images-container {
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+    }
+  }  
+
+@media (max-width: 300px) {
+    .images-container {
+    -moz-column-count:    1;
+    -webkit-column-count: 1;
+    column-count:         1;
+    }
+  }
